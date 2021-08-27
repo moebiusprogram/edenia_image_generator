@@ -1,0 +1,10 @@
+{
+  "name": "Edenia",
+  "version": "1.0.0",
+  "description": "Edenia Image Procesor",
+  "main": "index.js",
+  "repository": "https//github.com/moebiusprogram/edenia_image_processor.git",
+  "author": "Moebius Program",
+  "license": "MIT",
+  "private": true
+}
