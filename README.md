@@ -1,6 +1,6 @@
-# Edenia Image Processor
+# Edenia Image Generator
 
-![Edenia](https://github.com/moebiusprogram/edenia_image_processor/blob/master/img/edenia.png)
+![Edenia](https://github.com/moebiusprogram/edenia_image_generator/blob/master/img/edenia.png)
 
 
 ## License
