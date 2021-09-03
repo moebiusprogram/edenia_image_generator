@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.edenia-title Edenia NFT Generator
+  .edenia-buttons
+    button.btn.btn-primary.rounded-pill.edenia-generate Generate Edenia
+    button.btn.btn-primary.rounded-pill.edenia-generate Erase Canvas
+    button.btn.btn-primary.rounded-pill.edenia-generate About
+  .edenia-canvas
+    img.edenia-output(src="/images/output.jpg" alt="NFT Output")

@@ -1,0 +1,20 @@
+.edenia-title{
+  margin-top: 1rem;
+  font-size: 50px;
+  text-align: center;
+}
+.edenia-canvas{
+  text-align: center; 
+}
+.edenia-buttons{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.edenia-generate{
+  width: 200px;
+  margin: 30px;
+}
+.edenia-output{
+  width: 500px;
+}
