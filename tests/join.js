@@ -7,6 +7,6 @@ console.log("join",joinImages)
 
 
 
-joinImages(['block1.png', 'block2.jpg']).then((img) => {
+joinImages(['block1.png', 'block2.png']).then((img) => {
   img.toFile('out.png');
 });
