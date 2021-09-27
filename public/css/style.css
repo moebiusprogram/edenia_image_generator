@@ -21,3 +21,13 @@ body{
 .edenia-output{
   width: 500px;
 }
+.edenia-result{
+  height: 375px;
+  width: 500px;
+  background-color: #ece1db;
+  margin: auto;
+}
+
+
+
+
