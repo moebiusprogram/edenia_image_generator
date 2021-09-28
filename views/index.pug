@@ -3,8 +3,14 @@ extends layout
 block content
   h1.edenia-title Edenia NFT Generator
   .edenia-buttons
-    button.btn.btn-primary.rounded-pill.edenia-generate Generate Edenia
-    button.btn.btn-primary.rounded-pill.edenia-generate Erase Canvas
-    button.btn.btn-primary.rounded-pill.edenia-generate About
+    button.btn.btn-primary.rounded-pill.edenia-generate#edenia-generate Generate Edenia
+    button.btn.btn-primary.rounded-pill.edenia-generate#edenia-erase Erase Canvas
+    button.btn.btn-primary.rounded-pill.edenia-generate#edenia-about About
   .edenia-canvas
     .edenia-result
+      img.edenia-output#edenia-hat(src="/images/art/sombrero2.png" )
+      img.edenia-output#edenia-sword(src="/images/art/espada2.png" )
+      img.edenia-output#edenia-shoes(src="/images/art/zapatos3.png" )
+      img.edenia-output#edenia-body(src="/images/art/cuerpo3.png" )
+      img.edenia-output#edenia-eyes(src="/images/art/ojos3.png" )
+      img.edenia-output#edenia-mouth(src="/images/art/boca3.png" )

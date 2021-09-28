@@ -19,13 +19,17 @@ body{
   margin: 30px;
 }
 .edenia-output{
-  width: 500px;
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  width: 350px;
 }
 .edenia-result{
-  height: 375px;
+  height: 400px;
   width: 500px;
   background-color: #ece1db;
   margin: auto;
+  position: relative;
 }
 
 
