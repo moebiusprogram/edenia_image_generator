@@ -1,7 +1,4 @@
 
-
-console.log("Started")
-
 const generateBtn = document.getElementById("edenia-generate");
 const eraseBtn = document.getElementById("edenia-erase");
 const aboutBtn = document.getElementById("edenia-about");
@@ -20,11 +17,6 @@ const generateNFT = () => {
     body.src = "/images/art/cuerpo" + random(1,4) + ".png"
     eyes.src = "/images/art/ojos" + random(1,4) + ".png"
     mouth.src = "/images/art/boca" + random(1,4) + ".png"
-
-    const number = random(0,10)
-    //const number = 0
-
-    console.log("number",number)
 }
 
 
@@ -48,22 +40,17 @@ const eraseCanvas = () => {
     eyes.src = ""
     mouth.src = ""
 
-
-    const number = random(0,10)
-    //const number = 0
-
-    console.log("number",number)
 }
 
 
 
 generateBtn.addEventListener("click",function(e){
-    eraseCanvas()
+    generateNFT()
 },false);
 
 
 eraseBtn.addEventListener("click",function(e){
-    generateNFT()
+    eraseCanvas()
 },false);
 
 aboutBtn.addEventListener("click",function(e){
