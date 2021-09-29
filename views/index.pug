@@ -1,11 +1,29 @@
 extends layout
 
 block content
+  input#edenia-hat-value(type="hidden")
+  input#edenia-sword-value(type="hidden")
+  input#edenia-shoes-value(type="hidden")
+  input#edenia-body-value(type="hidden")
+  input#edenia-eyes-value(type="hidden")
+  input#edenia-mouth-value(type="hidden")
   h1.edenia-title Edenia NFT Generator
+  #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Mint NFT
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        .modal-body
+          img#edenia-nft(src="" )
+        .modal-footer
+          button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+          a.btn.btn-primary#edenia-download(href="" download=true) Download
+          button.btn.btn-primary#edenia-mint(type='button') Mint in Ethereum
   .edenia-buttons
     button.btn.btn-primary.rounded-pill.edenia-generate#edenia-generate Generate Edenia
     button.btn.btn-primary.rounded-pill.edenia-generate#edenia-erase Erase Canvas
-    button.btn.btn-primary.rounded-pill.edenia-generate#edenia-about About
+    button.btn.btn-primary.rounded-pill.edenia-generate#edenia-about(type="button" data-bs-toggle='modal' data-bs-target='#exampleModal' disabled=true) Mint NFT
   .edenia-canvas
     .edenia-result
       img.edenia-output#edenia-hat(src="" )

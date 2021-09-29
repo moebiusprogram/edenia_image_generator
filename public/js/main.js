@@ -2,6 +2,40 @@
 const generateBtn = document.getElementById("edenia-generate");
 const eraseBtn = document.getElementById("edenia-erase");
 const aboutBtn = document.getElementById("edenia-about");
+const downloadBtn = document.getElementById("edenia-download");
+const mintBtn = document.getElementById("edenia-mint");
+
+
+const hat_value = document.getElementById("edenia-hat-value");
+const sword_value = document.getElementById("edenia-sword-value");
+const shoes_value = document.getElementById("edenia-shoes-value");
+const body_value = document.getElementById("edenia-body-value");
+const eyes_value = document.getElementById("edenia-eyes-value");
+const mouth_value = document.getElementById("edenia-mouth-value");
+
+const nftOutput = document.getElementById("edenia-nft");
+
+
+const saveNFT = ()=>{
+
+    fetch('/api/v1/nft/generate?hat='+ hat_value.value + 
+        "&sword=" + sword_value.value + 
+        "&shoes=" + shoes_value.value +
+        "&body=" + body_value.value +
+        "&eyes=" + eyes_value.value +
+        "&mouth=" + mouth_value.value
+        )
+    .then( res => res.json() )
+    .then(response => {
+        console.log("response",response, typeof response)
+        console.log("response",response.message, typeof response.message)
+
+        nftOutput.src = response.result
+        downloadBtn.href = response.result
+    }) 
+    .catch(error => console.error('Error:', error))
+
+}
 
 const generateNFT = () => {
     const hat = document.getElementById("edenia-hat");
@@ -11,12 +45,31 @@ const generateNFT = () => {
     const eyes = document.getElementById("edenia-eyes");
     const mouth = document.getElementById("edenia-mouth");
 
-    hat.src = "/images/art/sombrero" + random(1,4) + ".png"
-    sword.src = "/images/art/espada" + random(1,4) + ".png"
-    shoes.src = "/images/art/zapatos" + random(1,4) + ".png"
-    body.src = "/images/art/cuerpo" + random(1,4) + ".png"
-    eyes.src = "/images/art/ojos" + random(1,4) + ".png"
-    mouth.src = "/images/art/boca" + random(1,4) + ".png"
+    let variation = random(1,4)
+    hat.src = "/images/art/sombrero" + variation + ".png"
+    hat_value.value = variation
+
+    variation = random(1,4)
+    sword.src = "/images/art/espada" + variation + ".png"
+    sword_value.value = variation
+
+    variation = random(1,4)
+    shoes.src = "/images/art/zapatos" + variation + ".png"
+    shoes_value.value = variation
+
+    variation = random(1,4)
+    body.src = "/images/art/cuerpo" + variation + ".png"
+    body_value.value = variation
+
+    variation = random(1,4)
+    eyes.src = "/images/art/ojos" + variation + ".png"
+    eyes_value.value = variation
+
+    variation = random(1,4)
+    mouth.src = "/images/art/boca" + variation + ".png"
+    mouth_value.value = variation
+
+    aboutBtn.disabled = false
 }
 
 
@@ -40,6 +93,16 @@ const eraseCanvas = () => {
     eyes.src = ""
     mouth.src = ""
 
+    hat_value.value = ""
+    sword_value.value = ""
+    shoes_value.value = ""
+    body_value.value = ""
+    eyes_value.value = ""
+    mouth_value.value = ""
+
+    downloadBtn.href = ""
+
+    aboutBtn.disabled = true
 }
 
 
@@ -54,8 +117,10 @@ eraseBtn.addEventListener("click",function(e){
 },false);
 
 aboutBtn.addEventListener("click",function(e){
-    
+    saveNFT()
 },false);
 
-
+mintBtn.addEventListener("click",function(e){
+    //saveNFT()
+},false);
 
