@@ -1,0 +1,12 @@
+{
+  "name": "Edenia_NFT",
+  "version": "1.0.0",
+  "description": "Edenia NTF",
+  "main": "index.js",
+  "author": "MoebiusProgram",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "openzeppelin-solidity": "^4.0.0"
+  }
+}
